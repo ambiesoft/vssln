@@ -1,48 +1,47 @@
 
-// MFC-2019Doc.cpp : implementation of the CMFC2019Doc class
+// MFC-2017Doc.cpp : implementation of the CMFC2017Doc class
 //
 
-#include "pch.h"
-#include "framework.h"
+#include "stdafx.h"
 // SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
 // and search filter handlers and allows sharing of document code with that project.
 #ifndef SHARED_HANDLERS
-#include "MFC-2019.h"
+#include "MFC-2017.h"
 #endif
 
-#include "MFC-2019Doc.h"
+#include "MFC-2017Doc.h"
 
 #include <propkey.h>
 
-#include "../../lsMisc/OpenCommon.h"
+#include "../../../lsMisc/OpenCommon.h"
 using namespace Ambiesoft;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
-// CMFC2019Doc
+// CMFC2017Doc
 
-IMPLEMENT_DYNCREATE(CMFC2019Doc, CDocument)
+IMPLEMENT_DYNCREATE(CMFC2017Doc, CDocument)
 
-BEGIN_MESSAGE_MAP(CMFC2019Doc, CDocument)
-	ON_COMMAND(ID_HELP_TEST, &CMFC2019Doc::OnHelpTest)
+BEGIN_MESSAGE_MAP(CMFC2017Doc, CDocument)
+	ON_COMMAND(ID_HELP_TEST, &CMFC2017Doc::OnHelpTest)
 END_MESSAGE_MAP()
 
 
-// CMFC2019Doc construction/destruction
+// CMFC2017Doc construction/destruction
 
-CMFC2019Doc::CMFC2019Doc() noexcept
+CMFC2017Doc::CMFC2017Doc() noexcept
 {
 	// TODO: add one-time construction code here
 
 }
 
-CMFC2019Doc::~CMFC2019Doc()
+CMFC2017Doc::~CMFC2017Doc()
 {
 }
 
-BOOL CMFC2019Doc::OnNewDocument()
+BOOL CMFC2017Doc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -56,9 +55,9 @@ BOOL CMFC2019Doc::OnNewDocument()
 
 
 
-// CMFC2019Doc serialization
+// CMFC2017Doc serialization
 
-void CMFC2019Doc::Serialize(CArchive& ar)
+void CMFC2017Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -73,7 +72,7 @@ void CMFC2019Doc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // Support for thumbnails
-void CMFC2019Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void CMFC2017Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// Modify this code to draw the document's data
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -94,7 +93,7 @@ void CMFC2019Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // Support for Search Handlers
-void CMFC2019Doc::InitializeSearchContent()
+void CMFC2017Doc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// Set search contents from document's data.
@@ -104,7 +103,7 @@ void CMFC2019Doc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void CMFC2019Doc::SetSearchContent(const CString& value)
+void CMFC2017Doc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -124,25 +123,25 @@ void CMFC2019Doc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// CMFC2019Doc diagnostics
+// CMFC2017Doc diagnostics
 
 #ifdef _DEBUG
-void CMFC2019Doc::AssertValid() const
+void CMFC2017Doc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void CMFC2019Doc::Dump(CDumpContext& dc) const
+void CMFC2017Doc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// CMFC2019Doc commands
+// CMFC2017Doc commands
 
 
-void CMFC2019Doc::OnHelpTest()
+void CMFC2017Doc::OnHelpTest()
 {
-	OpenCommon(nullptr, L"notepad");
+	OpenFolder(nullptr, L"C:\\T");
 }

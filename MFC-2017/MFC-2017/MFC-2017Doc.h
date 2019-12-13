@@ -1,16 +1,16 @@
 
-// MFC-2019Doc.h : interface of the CMFC2019Doc class
+// MFC-2017Doc.h : interface of the CMFC2017Doc class
 //
 
 
 #pragma once
 
 
-class CMFC2019Doc : public CDocument
+class CMFC2017Doc : public CDocument
 {
 protected: // create from serialization only
-	CMFC2019Doc() noexcept;
-	DECLARE_DYNCREATE(CMFC2019Doc)
+	CMFC2017Doc() noexcept;
+	DECLARE_DYNCREATE(CMFC2017Doc)
 
 // Attributes
 public:
@@ -29,7 +29,7 @@ public:
 
 // Implementation
 public:
-	virtual ~CMFC2019Doc();
+	virtual ~CMFC2017Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

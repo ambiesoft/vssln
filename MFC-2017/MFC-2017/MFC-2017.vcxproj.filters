@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MFC-2019.h">
+    <ClInclude Include="MFC-2017.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
@@ -30,10 +30,10 @@
     <ClInclude Include="ChildFrm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MFC-2019Doc.h">
+    <ClInclude Include="MFC-2017Doc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MFC-2019View.h">
+    <ClInclude Include="MFC-2017View.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -54,18 +54,15 @@
     <ClInclude Include="PropertiesWnd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lsMisc\OpenCommon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="..\..\..\lsMisc\OpenCommon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MFC-2019.cpp">
+    <ClCompile Include="MFC-2017.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
@@ -74,10 +71,10 @@
     <ClCompile Include="ChildFrm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MFC-2019Doc.cpp">
+    <ClCompile Include="MFC-2017Doc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MFC-2019View.cpp">
+    <ClCompile Include="MFC-2017View.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FileView.cpp">
@@ -95,15 +92,12 @@
     <ClCompile Include="PropertiesWnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\lsMisc\OpenCommon.cpp">
+    <ClCompile Include="..\..\..\lsMisc\OpenCommon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFC2019.rc">
+    <ResourceCompile Include="MFC2017.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -171,10 +165,10 @@
     <Image Include="res\userimages.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\MFC-2019Doc.ico">
+    <Image Include="res\MFC-2017Doc.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\MFC-2019.ico">
+    <Image Include="res\MFC-2017.ico">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">
@@ -185,7 +179,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MFC2019.rc2">
+    <None Include="res\MFC2017.rc2">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
